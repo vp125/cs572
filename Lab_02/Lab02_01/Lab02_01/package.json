@@ -1,0 +1,15 @@
+{
+  "name": "lab02_01",
+  "version": "1.0.0",
+  "description": "This is my first Express server",
+  "main": "lab02_01.js",
+  "scripts": {
+    "start" : "lab02_01.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express"
+  ],
+  "author": "Anh Vu",
+  "license": "ISC"
+}

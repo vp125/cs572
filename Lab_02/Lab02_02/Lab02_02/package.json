@@ -1,0 +1,15 @@
+{
+  "name": "lab02_02",
+  "version": "1.0.0",
+  "description": "MEAN game application",
+  "main": "lab02_02.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "MEANS",
+    "DB driven application"
+  ],
+  "author": "Anh Vu",
+  "license": "ISC"
+}

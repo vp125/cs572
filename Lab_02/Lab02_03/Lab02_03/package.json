@@ -1,0 +1,15 @@
+{
+  "name": "lab02_03",
+  "version": "1.0.0",
+  "description": "Add two number",
+  "main": "lab02_03.js",
+  "scripts": {
+    "start":"lab02_03.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Add two number"    
+  ],
+  "author": "Anh Vu",
+  "license": "ISC"
+}
