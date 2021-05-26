@@ -1,0 +1,12 @@
+<h3>{{movieCtrl.movie.title}}</h3>
+
+<ul>
+    <li>Title: {{movieCtrl.movie.title}}</li>
+    <li>Writer: {{movieCtrl.movie.writer}}</li>
+    <li>Year: {{movieCtrl.movie.year}}</li>    
+    <li>Rate: {{movieCtrl.movie.rating | rateToStar}}</li>
+    <li>Actors</li>
+        <ul>
+            <li ng-repeat="actor in movieCtrl.movie.actors">{{actor.name}}</li>
+        </ul>    
+</ul>
