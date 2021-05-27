@@ -1,0 +1,14 @@
+<h1>{{vm.title}}</h1>
+
+<ul>
+    <li ng-repeat="movie in vm.movies"><a ng-href="/#!/movies/{{movie._id}}">{{movie.title}}</a></li>
+</ul>
+
+<form name="vm.movieForm" ng-submit="vm.addMovie()" >
+    To add a new movie please fill in all the fields below:<BR/>    
+    Title: <input type="text" name="title" required ng-model="vm.newMovieTitle" style="color:black"/><BR/>    
+    Writer: <input type="text" name="title" required ng-model="vm.newMovieWriter" style="color:black"/><BR/>
+    Year of Publication: <input type="text" name="year" required ng-model="vm.newMovieYear" style="color:black"/><BR/>        
+    Rating: <input type="text" name="rating" required ng-model="vm.newMovieRating" ng-patter="/[1-5]{1}/" style="color:black"/><BR/>        
+    <button type="submit" class="btn-success">Add Movie</button><BR/>    
+</form>

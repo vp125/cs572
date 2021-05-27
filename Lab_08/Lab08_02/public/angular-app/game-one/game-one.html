@@ -1,0 +1,29 @@
+<h3>{{vm.game.title}} 
+    <game-rating stars={{vm.rating}}></game-rating>
+</h3>
+
+<ul>
+    <li>Title: {{vm.game.title}}</li>
+    <li>Year: {{vm.game.year}}</li>
+    <!-- <li>Rate: {{vm.game.rate | rateToStar}}</li> -->
+    <li>Rate: <game-rating stars={{vm.rating}}></game-rating></li>
+    <li>Price: {{vm.game.price | currency}}</li>
+    <li>MinPlayer: {{vm.game.minPlayers}}</li>    
+    <li>MaxPlayer: {{vm.game.maxPlayers}}</li>
+</ul>
+
+</br>
+<!-- <form name="vm.gameForm" ng-submit="vm.updateGame()">
+    To update a game please fill in one of the following fields below:<BR/>    
+    Price: <input type="text" name="price" required ng-model="vm.editedGamePrice" style="color:black"/><BR/>    
+    Minimum Players: <input type="text" name="minPlayers" required ng-pattern="/^[0-9]{1,2}/" ng-model="vm.editedGameMinPlayers" style="color:black"/>    
+    <span ng-show="vm.gameForm.minPlayers.$dirty && vm.gameForm.minPlayers.$invalid && vm.gameForm.isSubmitted" style="color:black">Minimum players must be at least 1.</span>
+    <BR/>    
+    Maximum Players: <input type="text" name="maxPlayers" required ng-model="vm.editedGameMaxPlayers" style="color:black"/><BR/>    
+    Minimum Age: <input type="text" name="minAge" required ng-model="vm.editedGameMinAge" style="color:black"/><BR/>    
+    <button type="submit" class="btn-success">Update Game</button><BR/>    
+</form> -->
+
+<form name="vm.gameForm" ng-submit="vm.deleteGame()" >
+    <button type="submit" class="btn-success">Delete Game</button><BR/>
+</form>
