@@ -1,0 +1,9 @@
+<h3>Add Job Location</h3>
+<form name="vm.locationForm" ng-submit="vm.addLocation()" >
+    To add location please fill in all the fields below:<BR/>    
+    City: <input type="text" name="city" required ng-model="vm.newLocationCity" style="color:black"/><BR/>    
+    State: <input type="text" name="state" required ng-model="vm.newLocationState" style="color:black"/><BR/>    
+    ZipCode: <input type="text" name="zipCode" required ng-model="vm.newLocationZipCode" style="color:black"/><BR/>
+    
+    <button type="submit" class="btn-success">Add Location</button><BR/>    
+</form>

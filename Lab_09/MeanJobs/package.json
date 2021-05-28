@@ -1,0 +1,22 @@
+{
+  "name": "meanjobs",
+  "version": "1.0.0",
+  "description": "Mean Jobs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Mean",
+    "Job"
+  ],
+  "author": "Anh Vu",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.8.2",
+    "angular-route": "^1.8.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.11"
+  }
+}

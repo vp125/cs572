@@ -1,0 +1,16 @@
+<a href="/#!/jobs/{{vm.jobId}}">Back To Job</a>
+<h3>Job Location</h3>
+<ul>
+    <li>{{vm.location.city}}</li>
+    <li>{{vm.location.state}}</li>
+    <li>{{vm.location.zipCode}}</li>
+</ul>
+
+<form ng-submit="vm.updateLocation()" >
+    To update location please fill in all the fields below:<BR/>    
+    City: <input type="text" name="city" required ng-model="vm.editedLocationCity" style="color:black"/><BR/>    
+    State: <input type="text" name="state" required ng-model="vm.editedLocationState" style="color:black"/><BR/>    
+    ZipCode: <input type="text" name="zipCode" required ng-model="vm.editedLocationZipCode" style="color:black"/><BR/>
+    
+    <button type="submit" class="btn-success">Update Location</button><BR/>    
+</form>

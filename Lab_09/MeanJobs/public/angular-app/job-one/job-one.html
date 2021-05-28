@@ -1,0 +1,20 @@
+<a href="/#!/">Home</a>
+<h3>{{vm.job.title}}</h3>
+
+<ul>    
+    <li>Title: {{vm.job.title}}</li>
+    <li>Salary: {{vm.job.salary | currency:"$":0}}/Year</li>
+    <li>Description: {{vm.job.description}}</li>    
+    <li>Experience: {{vm.job.experience}}</li>    
+    <li>Skills:</li>
+        <ul>
+            <li ng-repeat="skill in vm.job.skills">{{skill}}</li>
+        </ul>
+    <li>Post Date: {{vm.job.postDate | date:"MMM-dd-yyyy"}}</li>    
+    <li ng-if="vm.job.location"><a ng-href="/#!/jobs/{{vm.job._id}}/location">#Location</a></li>
+    <li ng-if="!vm.job.location"><a ng-href="/#!/jobs/{{vm.job._id}}/location/add">#Add Location</a></li>
+</ul>
+
+<form name="vm.jobForm" ng-submit="vm.deleteJob()" >
+    <button type="submit" class="btn-success">Delete Job</button><BR/>
+</form>
