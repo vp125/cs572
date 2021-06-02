@@ -1,0 +1,6 @@
+1. Type constrains 
+	=> detect improper assignment during compilation phase
+2. OOP support 
+	=> easy to design and implement application structure
+3. Code has to be written more strictly and clearly
+	=> easy to read and predict

@@ -1,0 +1,14 @@
+<h2>Search</h2>
+    <form name="vm.movieSearchForm" ng-submit="vm.searchMovie()" >
+        To search movie please fill one of the following fields below:<BR/>    
+        Title: <input type="text" name="title" ng-model="vm.searchMovieTitle" style="color:black"/><BR/>    
+        <!-- Price: <input type="text" name="price" required ng-model="vm.newMoviePrice" style="color:black"/><BR/>     -->
+        Year of Publication: <input type="text" name="year" ng-model="vm.searchMovieYear" style="color:black"/><BR/>    
+        Rating: <input type="text" name="rating" ng-model="vm.searchMovieRating" style="color:black"/><BR/>            
+        <button type="submit" class="btn-success">Search Movie</button><BR/>    
+    </form>
+    <br/>
+    Search Result:
+    <ul>
+        <li ng-repeat="movie in vm.movies"><a ng-href="/#/movies/{{movie._id}}">{{movie.title}}</a></li>
+    </ul>
