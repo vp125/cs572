@@ -1,0 +1,14 @@
+<h2>Search</h2>
+    <form name="vm.gameSearchForm" ng-submit="vm.searchGame()" >
+        To search game please fill one of the following fields below:<BR/>    
+        Title: <input type="text" name="title" ng-model="vm.searchGameTitle" style="color:black"/><BR/>    
+        <!-- Price: <input type="text" name="price" required ng-model="vm.newGamePrice" style="color:black"/><BR/>     -->
+        Year of Publication: <input type="text" name="year" ng-model="vm.searchGameYear" style="color:black"/><BR/>    
+        Rating: <input type="text" name="rating" ng-model="vm.searchGameRating" style="color:black"/><BR/>            
+        <button type="submit" class="btn-success">Search Game</button><BR/>    
+    </form>
+    <br/>
+    Search Result:
+    <ul>
+        <li ng-repeat="game in vm.games"><a ng-href="/#!/games/{{game._id}}">{{game.title}}</a></li>
+    </ul>
