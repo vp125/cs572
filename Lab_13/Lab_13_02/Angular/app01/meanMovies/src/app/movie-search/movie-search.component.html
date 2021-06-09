@@ -1,0 +1,16 @@
+<h2>Search</h2>
+<form [formGroup]="searchMovieForm" (ngSubmit)="onSearchMovie()">
+  To search movie please fill one of the following fields below:<BR />
+  Title: <input type="text" name="title" formControlName="title" style="color:black" /><BR />
+  <!-- Price: <input type="text" name="price" required formControlName="newMoviePrice" style="color:black"/><BR/>     -->
+  Year of Publication: <input type="text" name="year" formControlName="year" style="color:black" /><BR />
+  Rating: <input type="text" name="rating" formControlName="rate" style="color:black" /><BR />
+  <button type="submit" class="btn-success">Search Movie</button><BR />
+</form>
+<br />
+<div *ngIf="movies">
+  Search Result:
+  <ul>
+    <li *ngFor="let movie of movies"><a routerLink="/movies/{{movie._id}}">{{movie.title}}</a></li>
+  </ul>
+</div>

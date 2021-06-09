@@ -1,0 +1,22 @@
+1- What is Node?
+- Nodejs is an open-source and cross-platform which enables run javascript on server side.
+- Nodejs runs on top of V8 JavaScript engine
+- Nodejs app runs in a single thread, uses an even-driven, non-blocking I/O model
+
+2- What is the Event-Loop in Node?
+The event loops enables Node to handle concurrent requests in a single thread. When node recieves a request from a client(V8) node will put the request into event queue. The event loop iterate over the event queue which contains a list of events and callbacks of completed operations. If an item requires I/O access the event loop delegates the operation to thread pool (using libuv) and therefore this operation is executed in another separated thread. This prevents the main thread from blocking and enables to proceed other items in the event queue. Once the I/O operation is completed, the binded callback is queued for processing. The event loop finally executes the callback and responds the result to client (V8).
+
+Event loop process event/callback through several phases as the following
+- Timer (setTimeout, setInterval)
+- Pending callbacks (least important callbacks)
+- Idle (internal node usage)
+- Poll (most important I/O operation, retrieve I/O events and execute I/O related callbacks)
+- Check (setImmediate)
+- Close callbacks
+
+Each phase has its own event queue of callbacks to execute.
+
+3- Based on what we learned so far what are the differences between AngularJS and Angular?
+- AngularJS is javascript based while Angular is typescript based
+- AngularJS is a MVC based framework while Angular is Component & Directive based
+- Angular is typescript based thus it has better structure compare to AngularJs

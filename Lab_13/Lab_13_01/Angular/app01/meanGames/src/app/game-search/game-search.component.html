@@ -1,0 +1,16 @@
+<h2>Search</h2>
+<form [formGroup]="searchGameForm" (ngSubmit)="onSearchGame()">
+  To search game please fill one of the following fields below:<BR />
+  Title: <input type="text" name="title" formControlName="title" style="color:black" /><BR />
+  <!-- Price: <input type="text" name="price" required formControlName="newGamePrice" style="color:black"/><BR/>     -->
+  Year of Publication: <input type="text" name="year" formControlName="year" style="color:black" /><BR />
+  Rating: <input type="text" name="rating" formControlName="rate" style="color:black" /><BR />
+  <button type="submit" class="btn-success">Search Game</button><BR />
+</form>
+<br />
+<div *ngIf="games">
+  Search Result:
+  <ul>
+    <li *ngFor="let game of games"><a routerLink="/games/{{game._id}}">{{game.title}}</a></li>
+  </ul>
+</div>

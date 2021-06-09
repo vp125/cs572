@@ -1,0 +1,20 @@
+<div *ngIf="movie">
+  <h3>{{movie.title}}</h3>
+
+  <ul>
+    <li>Title: {{movie.title}}</li>
+    <li>Writer: {{movie.writer}}</li>
+    <li>Year: {{movie.year}}</li>
+    <li>Rate: {{movie.rating}}</li>
+    <li>Actors</li>
+    <ul>
+      <li *ngFor="let actor of movie.actors">{{actor.name}}</li>
+    </ul>
+  </ul>
+
+  <div *ngIf="isLoggedIn()">
+    <form [formGroup]="deleteMovieForm" (ngSubmit)="onDeleteMovie()">
+      <button type="submit" class="btn-success">Delete Movie</button><BR />
+    </form>
+  </div>
+</div>

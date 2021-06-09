@@ -1,0 +1,26 @@
+<ul>
+    <li *ngFor="let movie of movies"><a routerLink="/movies/{{movie._id}}">{{movie.title}}</a></li>
+</ul>
+
+<div *ngIf="isLoggedIn()">
+  <div *ngIf="message" class="alert alert-success" role="alert">
+    <p>{{message}}</p>
+  </div>
+
+  <div *ngIf="err" class="alert alert-danger" role="alert">
+    <p>{{err}}</p>
+  </div>
+  <div *ngIf="isLoggedIn()">
+    <form [formGroup]="addMovieForm" (ngSubmit)="onAddMovie()">
+        To add a new movie please fill in all the fields below:<BR />
+        Title: <input type="text" name="title" required formControlName="title" style="color:black" /><BR />
+        Writer: <input type="text" name="title" required formControlName="writer" style="color:black" /><BR />
+        Year of Publication: <input type="text" name="year" required formControlName="year"
+            style="color:black" /><BR />
+        Rating: <input type="text" name="rating" required formControlName="rating" ng-patter="/[1-5]{1}/"
+            style="color:black" /><BR />
+        <button type="submit" class="btn-success">Add Movie</button><BR />
+    </form>
+</div>
+</div>
+

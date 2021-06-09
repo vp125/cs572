@@ -1,0 +1,20 @@
+<h3>{{vm.movie.title}} 
+    <movie-rating stars={{vm.rating}}></game-rating>
+</h3>
+
+<ul>
+    <li>Title: {{vm.movie.title}}</li>
+    <li>Writer: {{vm.movie.writer}}</li>
+    <li>Year: {{vm.movie.year}}</li>    
+    <li>Rate: <movie-rating stars={{vm.rating}}></li>
+    <li>Actors</li>
+        <ul>
+            <li ng-repeat="actor in vm.movie.actors">{{actor.name}}</li>
+        </ul>    
+</ul>
+
+<div ng-if="vm.isLoggedIn()">
+    <form name="vm.movieForm" ng-submit="vm.deleteMovie()">
+        <button type="submit" class="btn-success">Delete Movie</button><BR />
+    </form>
+</div>
